@@ -1,13 +1,16 @@
 #include <iostream>
 #include "menu.h"
+#include "crsu.h"
 #include <ncurses.h>
 #include <menu.h>
 
 int main()
 {
+
 	int c;
 
-	initscr();
+    crsu::init();
+
 	cbreak();
 	noecho();
 	keypad(stdscr, TRUE);
@@ -20,19 +23,19 @@ int main()
         "Exit"
     };
 
-    ncurse::Menu menu(choices);
+    crsu::Menu menu(choices);
 
-	mvprintw(LINES - 2, 0, "F1 to Exit");
-	post_menu(menu.getHandle());
+    menu.display();
 	refresh();
 
 	while((c = getch()) != 'q')
-	{   switch(c)
-	    {	case KEY_DOWN:
-		        menu_driver(menu.getHandle(), REQ_DOWN_ITEM);
+	{
+        switch(c)
+	    {	case 'k':
+                menu.selectUp();
 				break;
-			case KEY_UP:
-				menu_driver(menu.getHandle(), REQ_UP_ITEM);
+			case 'j':
+                menu.selectDown();
 				break;
 		}
 	}

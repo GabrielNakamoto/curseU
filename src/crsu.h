@@ -1,6 +1,6 @@
-#include <ncurses.h>
+#include "common.h"
 
-namespace ncurse
+namespace crsu
 {
 
 void init()
