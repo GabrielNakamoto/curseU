@@ -1,0 +1,21 @@
+TODO:
+
+-   Make it just a ncurses / menu wrapper?
+-   RAII
+-   Good error handling
+-   Proper CMAKE file
+-   Actually finish it
+-   Modern C++
+
+
+Resources:
+
+    https://tldp.org/HOWTO/NCURSES-Programming-HOWTO/
+    https://github.com/Praetonus/Ncursescpp/tree/master
+    https://github.com/hikogui/hikogui
+    https://arthursonzogni.github.io/FTXUI/examples_2component_2menu_multiple_8cpp-example.html
+    https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0709r4.pdf
+    https://github.com/janekb04/glfwpp/blob/main/include/glfwpp/window.h
+    https://softwareengineering.stackexchange.com/questions/181587/good-design-pattern-for-a-c-wrapper-around-a-c-object
+    https://stackoverflow.com/questions/2761266/writing-a-c-wrapper-for-a-c-library
+    https://stackoverflow.com/questions/19053351/how-do-i-use-a-custom-deleter-with-a-stdunique-ptr-member
