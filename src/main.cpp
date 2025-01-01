@@ -33,10 +33,10 @@ int main()
 		switch(c)
 		{
 			case 'k':
-				menu.selectUp();
+				menu.driver(crsu::Req::UpItem);
 				break;
 			case 'j':
-				menu.selectDown();
+				menu.driver(crsu::Req::DownItem);
 				break;
 		}
 	}
