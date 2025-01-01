@@ -1,36 +1,16 @@
-#pragma once
+#ifndef MENU_H
+#define MENU_H
+
+#include <iostream>
+#include <memory>
+#include <vector>
+
+#include <ncurses.h>
+#include <menu.h>
 
 #include "handle.h"
-#include "common.h"
 
 namespace crsu {
-
-/* class Item */
-/* { */
-/* private: */
-
-/*     // shared handle? */
-
-/*     Handle<ITEM> handle; */
-
-/*     std::string name; */
-/*     std::string description; */
-
-/*     std::function<void> callback; */
-
-/*     // make this function be able */
-/*     // to be pretty much anything? */
-
-/* public: */
-
-/*     Item(const std::string &name, const std::string &description) */
-/*         :   name(name) */
-/*         ,   description(description) */
-/*         ,   handle(new_item(name.c_str(), description.c_str()), free_item); */
-/*     { */
-
-/*     } */
-/* }; */
 
 class Menu
 {
@@ -117,3 +97,5 @@ public:
 };
 
 }
+
+#endif

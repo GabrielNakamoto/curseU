@@ -1,6 +1,10 @@
-#pragma once
+#ifndef WINDOW_H
+#define WINDOW_H
 
-#include "common.h"
+#include <iostream>
+#include <ncurses.h>
+
+#include "handle.h"
 
 namespace csru
 {
@@ -31,3 +35,5 @@ public:
 };
 
 }
+
+#endif

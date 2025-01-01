@@ -1,7 +1,8 @@
-#pragma once
+#ifndef HANDLE_H
+#define HANDLE_H
 
-
-#include "common.h"
+#include <iostream>
+#include <memory>
 
 namespace crsu {
 
@@ -37,3 +38,5 @@ public:
 };
 
 }
+
+#endif
