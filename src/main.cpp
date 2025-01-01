@@ -23,25 +23,23 @@ int main()
         "Exit"
     };
 
-    ITEM **tar;
+    crsu::Menu menu(choices); 
 
-    MENU *test = new_menu(tar);
-    /* crsu::Menu menu(choices); */
+    menu.display();
+	refresh();
 
-    /* menu.display(); */
-	/* refresh(); */
-
-	/* while((c = getch()) != 'q') */
-	/* { */
-    /*     switch(c) */
-	    /* {	case 'k': */
-    /*             menu.selectUp(); */
-				/* break; */
-			/* case 'j': */
-    /*             menu.selectDown(); */
-				/* break; */
-		/* } */
-	/* } */
+	while((c = getch()) != 'q')
+	{
+		switch(c)
+		{
+			case 'k':
+				menu.selectUp();
+				break;
+			case 'j':
+				menu.selectDown();
+				break;
+		}
+	}
 
 	endwin();
 }

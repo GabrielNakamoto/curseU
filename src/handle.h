@@ -2,6 +2,7 @@
 #define HANDLE_H
 
 #include <iostream>
+#include <functional>
 #include <memory>
 
 namespace crsu {
