@@ -41,7 +41,6 @@ private:
     // vector of Item handles?
 
     Handle<ITEM*> itemsHandle;
-    /* std::vector<H> */
     Handle<MENU> handle;
 
     ITEM **allocateItems(const std::vector<std::string> &itemNames)
@@ -71,11 +70,7 @@ public:
                                 free_item(items[i]);
                             }
                         })
-        ,   handle(new_menu(itemsHandle.get()),
-                       [](MENU *menu)
-                      {
-                            free_menu(menu);
-                       })
+        ,   handle(new_menu(itemsHandle.get()), free_menu)
     {
 
     }
